@@ -10,10 +10,9 @@ exports.getOnePlat = (req, res, next) => {
 		.then((plat) => {
 			console.log(plat);
 			res.status(200).json({
-				dateTime: plat.dateTime,
-				client_name: plat.client_name,
-				nb_tables: plat.nb_tables,
-				seatings: plat.seatings,
+				name: plat.name,
+				price: plat.price,
+				type: plat.type,
 			});
 		})
 		.catch((error) => res.status(404).json({ error }));

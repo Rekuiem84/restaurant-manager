@@ -1,4 +1,7 @@
 const Users = require("../models/User");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+require("dotenv").config();
 
 exports.getAllUsers = (req, res, next) => {
 	Users.find()
@@ -29,21 +32,22 @@ exports.postNewUser = (req, res, next) => {
 			.status(400)
 			.json({ message: "Tous les champs sont obligatoires." });
 	}
-
-	const user = new Users({
-		first_name,
-		last_name,
-		email,
-		password, // Utilisation du mot de passe sans hachage
-		roleId,
-	});
-
-	user
-		.save()
-		.then(() =>
-			res.status(201).json({ message: "Le user vient d'être créé !" })
-		)
-		.catch((error) => res.status(400).json({ error: error }));
+	bcrypt
+		.hash(req.body.password, 10)
+		.then((hash) => {
+			const user = new Users({
+				first_name: req.body.first_name,
+				last_name: req.body.last_name,
+				email: req.body.email,
+				password: hash,
+				roleId: req.body.roleId,
+			});
+			user
+				.save()
+				.then(() => res.status(201).json({ message: "Utilisateur créé !" }))
+				.catch((error) => res.status(400).json({ error }));
+		})
+		.catch((error) => res.status(500).json({ error }));
 };
 
 exports.updateOneUser = (req, res, next) => {
@@ -70,4 +74,32 @@ exports.deleteOneUser = (req, res, next) => {
 	Users.deleteOne({ _id: req.params.id })
 		.then(() => res.status(200).json({ message: "User supprimé !" }))
 		.catch((error) => res.status(400).json({ error }));
+};
+
+exports.loginUser = (req, res, next) => {
+	Users.findOne({ email: req.body.email })
+		.then((user) => {
+			if (user === null) {
+				res.status(401).json({ message: "Email ou mot de passe incorrects" });
+			} else {
+				bcrypt
+					.compare(req.body.password, user.password)
+					.then((valid) => {
+						if (!valid) {
+							res
+								.status(401)
+								.json({ message: "Email ou mot de passe incorrects" });
+						} else {
+							res.status(200).json({
+								userId: user._id,
+								token: jwt.sign({ userId: user._id }, process.env.SECRET_HASH, {
+									expiresIn: "24h",
+								}),
+							});
+						}
+					})
+					.catch((error) => res.status(500).json({ error }));
+			}
+		})
+		.catch((error) => res.status(500).json({ error }));
 };
