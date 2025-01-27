@@ -1,9 +1,19 @@
 const mongoose = require("mongoose");
 
 const commandeSchema = mongoose.Schema({
-	id_reservation: { type: Number, required: true },
-	order: { type: Text, required: true },
-	is_done: { type: String, required: true },
+	plats: [
+		{
+			platId: {
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "Plat",
+				required: true,
+			},
+			quantity: { type: Number, required: true },
+		},
+	],
+	notes: { type: String },
+	is_done: { type: Boolean, required: true, default: false },
+	createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Commande", commandeSchema);
+module.exports = mongoose.model("Commande", commandeSchema, "Commande");

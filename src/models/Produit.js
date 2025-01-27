@@ -5,4 +5,4 @@ const produitSchema = mongoose.Schema({
 	quantity: { type: String, required: true },
 });
 
-module.exports = mongoose.model("Produit", produitSchema);
+module.exports = mongoose.model("Produit", produitSchema, "Produit");

@@ -5,6 +5,11 @@ const reservationSchema = mongoose.Schema({
 	client_name: { type: String, required: true },
 	nb_tables: { type: Number, required: true },
 	seatings: { type: Number, required: true },
+	specialRequests: { type: String },
 });
 
-module.exports = mongoose.model("Reservation", reservationSchema);
+module.exports = mongoose.model(
+	"Reservation",
+	reservationSchema,
+	"Reservation"
+);
