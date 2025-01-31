@@ -38,3 +38,16 @@ exports.deleteOnePlat = (req, res, next) => {
 		.then(() => res.status(200).json({ message: "Plat supprimé !" }))
 		.catch((error) => res.status(400).json({ error }));
 };
+exports.getIngredientsOfPlat = (req, res, next) => {
+	Plats.findOne({ _id: req.params.id })
+		.populate("ingredients")
+		.then((plat) => res.status(200).json(plat.ingredients))
+		.catch((error) => res.status(404).json({ error }));
+};
+exports.getAllPlatsOfType = (req, res, next) => {
+	console.log(req.params.type);
+	Plats.find({ type: req.params.type })
+		.then((plats) => res.status(200).json(plats))
+		.catch((error) => res.status(400).json({ error }));
+};
+exports.getPopularPlats = (req, res, next) => {};

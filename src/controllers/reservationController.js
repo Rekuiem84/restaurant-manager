@@ -42,3 +42,8 @@ exports.deleteOneReservation = (req, res, next) => {
 		.then(() => res.status(200).json({ message: "Reservation supprimé !" }))
 		.catch((error) => res.status(400).json({ error }));
 };
+exports.getReservationsByDay = (req, res, next) => {
+	Reservations.find({ dateTime: req.params.date })
+		.then((reservations) => res.status(200).json(reservations))
+		.catch((error) => res.status(400).json({ error }));
+};
