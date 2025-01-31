@@ -1,1092 +1,1955 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "title": "My API",
-    "description": "Description",
-    "version": "1.0.0"
-  },
-  "host": "localhost:3000",
-  "basePath": "/",
-  "schemes": [
-    "http"
-  ],
-  "paths": {
-    "/api/commandes/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/commandes/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/ingredients/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/ingredients/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/plats/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/plats/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/produits/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/produits/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/recettes/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/recettes/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/reservations/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/reservations/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/roles/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/roles/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/salles/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/salles/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      }
-    },
-    "/api/users/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "password": {
-                  "example": "any"
-                },
-                "first_name": {
-                  "example": "any"
-                },
-                "last_name": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "roleId": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api/users/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
-      },
-      "patch": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      }
-    },
-    "/api/users/login": {
-      "post": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    }
-  }
+	"swagger": "2.0",
+	"info": {
+		"title": "Gestion de restaurant",
+		"description": "Gestionnaire de restaurant, de la gestion des différents roles au suivi des commandes.",
+		"version": "1.0.0"
+	},
+	"host": "localhost:3000",
+	"basePath": "/api",
+	"securityDefinitions": {
+		"Bearer": {
+			"type": "apiKey",
+			"name": "Authorization",
+			"in": "header",
+			"description": "Format du token: Bearer Bearer <token>"
+		}
+	},
+	"security": [
+		{
+			"Bearer": []
+		}
+	],
+	"schemes": ["http"],
+	"tags": [
+		{
+			"name": "users",
+			"description": "Gestion des utilisateurs au sein du restaurant"
+		},
+		{
+			"name": "reservations",
+			"description": "Gestion des réservations du restaurant"
+		},
+		{
+			"name": "plats",
+			"description": "Gestion des plats du restaurant"
+		},
+		{
+			"name": "commandes",
+			"description": "Gestion des commandes du restaurant"
+		},
+		{
+			"name": "recettes",
+			"description": "Gestion des recettes du restaurant"
+		},
+		{
+			"name": "ingredients",
+			"description": "Gestion des ingrédients du restaurant"
+		},
+		{
+			"name": "produits",
+			"description": "Gestion des produits du restaurant"
+		},
+		{
+			"name": "roles",
+			"description": "Gestion des roles du restaurant"
+		},
+		{
+			"name": "salles",
+			"description": "Gestion de la salle du restaurant"
+		}
+	],
+	"paths": {
+		"/users": {
+			"get": {
+				"tags": ["users"],
+				"summary": "Récupérer la liste des utilisateurs",
+				"description": "Permet de récupérer la liste complète des utilisateurs",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK - Liste des utilisateurs récupérée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"post": {
+				"tags": ["users"],
+				"summary": "Créer un nouvel utilisateur",
+				"description": "Permet de créer un nouveau compte utilisateur",
+				"parameters": [
+					{
+						"name": "body",
+						"in": "body",
+						"required": true,
+						"description": "Données de l'utilisateur à créer",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"password": {
+									"type": "string",
+									"format": "password",
+									"description": "Mot de passe de l'utilisateur",
+									"example": "mot_de_passe_123"
+								},
+								"first_name": {
+									"type": "string",
+									"description": "Prénom de l'utilisateur",
+									"example": "Jean"
+								},
+								"last_name": {
+									"type": "string",
+									"description": "Nom de l'utilisateur",
+									"example": "Dupont"
+								},
+								"email": {
+									"type": "string",
+									"format": "email",
+									"description": "Adresse email de l'utilisateur",
+									"example": "jean.dupont@example.com"
+								},
+								"roleId": {
+									"type": "string",
+									"description": "Identifiant du rôle de l'utilisateur",
+									"example": "role_123"
+								}
+							},
+							"required": [
+								"password",
+								"first_name",
+								"last_name",
+								"email",
+								"roleId"
+							]
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "Created - Utilisateur créé avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/users/{id}": {
+			"get": {
+				"tags": ["users"],
+				"summary": "Récupérer un utilisateur spécifique",
+				"description": "Permet de récupérer les détails d'un utilisateur par son ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de l'utilisateur"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Utilisateur récupéré avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Utilisateur non trouvé"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["users"],
+				"summary": "Supprimer un utilisateur",
+				"description": "Permet de supprimer un utilisateur existant",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de l'utilisateur"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Utilisateur supprimé avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Utilisateur non trouvé"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["users"],
+				"summary": "Modifier partiellement un utilisateur",
+				"description": "Permet de modifier partiellement les informations d'un utilisateur existant",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de l'utilisateur"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Utilisateur modifié avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Utilisateur non trouvé"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/users/login": {
+			"post": {
+				"tags": ["users"],
+				"summary": "Authentifier un utilisateur",
+				"description": "Permet à un utilisateur de se connecter et d'obtenir un token d'authentification",
+				"parameters": [
+					{
+						"name": "body",
+						"in": "body",
+						"required": true,
+						"description": "Credentials de connexion",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"email": {
+									"type": "string",
+									"format": "email",
+									"description": "Adresse email de l'utilisateur",
+									"example": "jean.dupont@example.com"
+								},
+								"password": {
+									"type": "string",
+									"format": "password",
+									"description": "Mot de passe de l'utilisateur",
+									"example": "mot_de_passe_123"
+								}
+							},
+							"required": ["email", "password"]
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Authentification réussie"
+					},
+					"401": {
+						"description": "Unauthorized - Identifiants invalides"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/api/commandes/todo": {
+			"get": {
+				"tags": ["commandes"],
+				"summary": "Liste des commandes en attente",
+				"description": "Récupère les commandes qui doivent encore être traitées.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/commandes/": {
+			"get": {
+				"tags": ["commandes"],
+				"summary": "Liste des commandes",
+				"description": "Récupère toutes les commandes enregistrées dans le système.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"post": {
+				"tags": ["commandes"],
+				"summary": "Création d'une commande",
+				"description": "Ajoute une nouvelle commande au système.",
+				"parameters": [
+					{
+						"name": "commande",
+						"in": "body",
+						"description": "Détails de la commande à créer.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"plat": {
+									"type": "string",
+									"description": "Nom du plat"
+								},
+								"quantite": {
+									"type": "integer",
+									"description": "Quantité du plat"
+								},
+								"client": {
+									"type": "string",
+									"description": "Identifiant du client"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "Created"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/commandes/{id}": {
+			"get": {
+				"tags": ["commandes"],
+				"summary": "Détails d'une commande",
+				"description": "Récupère les informations d'une commande spécifique à partir de son identifiant.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID de la commande."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["commandes"],
+				"summary": "Suppression d'une commande",
+				"description": "Supprime une commande en fonction de son identifiant.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID de la commande à supprimer."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["commandes"],
+				"summary": "Mise à jour d'une commande",
+				"description": "Modifie les détails d'une commande existante.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID de la commande à modifier."
+					},
+
+					{
+						"name": "commande",
+						"in": "body",
+						"description": "Détails modifiés de la commande.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"plat": {
+									"type": "string",
+									"description": "Nouveau plat de la commande"
+								},
+								"quantite": {
+									"type": "integer",
+									"description": "Nouvelle quantité"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/ingredients/": {
+			"get": {
+				"tags": ["ingredients"],
+				"summary": "Liste des ingrédients",
+				"description": "Récupère tous les ingrédients disponibles dans le système.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"post": {
+				"tags": ["ingredients"],
+				"summary": "Ajout d'un nouvel ingrédient",
+				"description": "Permet d'ajouter un nouvel ingrédient à la base de données.",
+				"parameters": [
+					{
+						"name": "ingredient",
+						"in": "body",
+						"description": "Détails de l'ingrédient à ajouter.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"nom": {
+									"type": "string",
+									"description": "Nom de l'ingrédient"
+								},
+								"quantite": {
+									"type": "integer",
+									"description": "Quantité disponible en stock"
+								},
+								"unite": {
+									"type": "string",
+									"description": "Unité de mesure"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "Created"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/ingredients/{id}": {
+			"get": {
+				"tags": ["ingredients"],
+				"summary": "Détails d'un ingrédient",
+				"description": "Récupère les informations d'un ingrédient spécifique en fonction de son ID.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID de l'ingrédient à récupérer."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"put": {
+				"tags": ["ingredients"],
+				"summary": "Mise à jour d'un ingrédient",
+				"description": "Modifie les informations d'un ingrédient existant.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID de l'ingrédient à modifier."
+					},
+
+					{
+						"name": "ingredient",
+						"in": "body",
+						"description": "Détails mis à jour de l'ingrédient.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"nom": {
+									"type": "string",
+									"description": "Nouveau nom de l'ingrédient"
+								},
+								"quantite": {
+									"type": "integer",
+									"description": "Nouvelle quantité disponible"
+								},
+								"unite": {
+									"type": "string",
+									"description": "Nouvelle unité de mesure"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["ingredients"],
+				"summary": "Suppression d'un ingrédient",
+				"description": "Supprime un ingrédient de la base de données en fonction de son ID.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID de l'ingrédient à supprimer."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/plats/": {
+			"get": {
+				"tags": ["plats"],
+				"summary": "Liste des plats",
+				"description": "Récupère tous les plats disponibles dans le système.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"post": {
+				"tags": ["plats"],
+				"summary": "Ajout d'un nouveau plat",
+				"description": "Permet d'ajouter un nouveau plat au menu.",
+				"parameters": [
+					{
+						"name": "plat",
+						"in": "body",
+						"description": "Détails du plat à ajouter.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"nom": {
+									"type": "string",
+									"description": "Nom du plat"
+								},
+								"description": {
+									"type": "string",
+									"description": "Description du plat"
+								},
+								"type": {
+									"type": "string",
+									"description": "Type du plat (entrée, plat principal, dessert)"
+								},
+								"prix": {
+									"type": "number",
+									"description": "Prix du plat"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "Created"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/plats/{id}": {
+			"get": {
+				"tags": ["plats"],
+				"summary": "Détails d'un plat",
+				"description": "Récupère les informations d'un plat spécifique en fonction de son ID.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID du plat à récupérer."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["plats"],
+				"summary": "Suppression d'un plat",
+				"description": "Supprime un plat de la base de données en fonction de son ID.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID du plat à supprimer."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["plats"],
+				"summary": "Mise à jour partielle d'un plat",
+				"description": "Modifie partiellement les informations d'un plat existant.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID du plat à modifier."
+					},
+
+					{
+						"name": "plat",
+						"in": "body",
+						"description": "Détails mis à jour du plat.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"nom": {
+									"type": "string",
+									"description": "Nouveau nom du plat"
+								},
+								"description": {
+									"type": "string",
+									"description": "Nouvelle description"
+								},
+								"type": {
+									"type": "string",
+									"description": "Nouveau type (entrée, plat principal, dessert)"
+								},
+								"prix": {
+									"type": "number",
+									"description": "Nouveau prix"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/plats/{id}/ingredients": {
+			"get": {
+				"tags": ["plats"],
+				"summary": "Liste des ingrédients d'un plat",
+				"description": "Récupère la liste des ingrédients associés à un plat donné.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID du plat concerné."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/plats/type/{type}": {
+			"get": {
+				"tags": ["plats"],
+				"summary": "Liste des plats par type",
+				"description": "Récupère tous les plats d'un type donné (entrée, plat principal, dessert).",
+				"parameters": [
+					{
+						"name": "type",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Type de plat recherché."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/plats/popular": {
+			"get": {
+				"tags": ["plats"],
+				"summary": "Plats populaires",
+				"description": "Récupère la liste des plats les plus commandés.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/produits/": {
+			"get": {
+				"tags": ["produits"],
+				"summary": "Liste des produits",
+				"description": "Récupère tous les produits disponibles dans le système.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"post": {
+				"tags": ["produits"],
+				"summary": "Ajout d'un nouveau produit",
+				"description": "Permet d'ajouter un nouveau produit à la base de données.",
+				"parameters": [
+					{
+						"name": "produit",
+						"in": "body",
+						"description": "Détails du produit à ajouter.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"nom": {
+									"type": "string",
+									"description": "Nom du produit"
+								},
+								"description": {
+									"type": "string",
+									"description": "Description du produit"
+								},
+								"categorie": {
+									"type": "string",
+									"description": "Catégorie du produit"
+								},
+								"prix": {
+									"type": "number",
+									"description": "Prix du produit"
+								},
+								"stock": {
+									"type": "integer",
+									"description": "Quantité en stock"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "Created"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/api/produits/{id}": {
+			"get": {
+				"tags": ["produits"],
+				"summary": "Détails d'un produit",
+				"description": "Récupère les informations d'un produit spécifique en fonction de son ID.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID du produit à récupérer."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["produits"],
+				"summary": "Suppression d'un produit",
+				"description": "Supprime un produit de la base de données en fonction de son ID.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID du produit à supprimer."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["produits"],
+				"summary": "Mise à jour partielle d'un produit",
+				"description": "Modifie partiellement les informations d'un produit existant.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "L'ID du produit à modifier."
+					},
+
+					{
+						"name": "produit",
+						"in": "body",
+						"description": "Détails mis à jour du produit.",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"nom": {
+									"type": "string",
+									"description": "Nouveau nom du produit"
+								},
+								"description": {
+									"type": "string",
+									"description": "Nouvelle description"
+								},
+								"categorie": {
+									"type": "string",
+									"description": "Nouvelle catégorie"
+								},
+								"prix": {
+									"type": "number",
+									"description": "Nouveau prix"
+								},
+								"stock": {
+									"type": "integer",
+									"description": "Nouvelle quantité en stock"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				}
+			}
+		},
+		"/recettes": {
+			"get": {
+				"tags": ["recettes"],
+				"summary": "Récupérer la liste des recettes",
+				"description": "Permet de récupérer la liste complète des recettes",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK - Liste des recettes récupérée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"post": {
+				"tags": ["recettes"],
+				"summary": "Créer une nouvelle recette",
+				"description": "Permet d'ajouter une nouvelle recette",
+				"parameters": [],
+				"responses": {
+					"201": {
+						"description": "Created - Recette créée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/recettes/{id}": {
+			"get": {
+				"tags": ["recettes"],
+				"summary": "Récupérer une recette spécifique",
+				"description": "Permet de récupérer les détails d'une recette par son ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la recette"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Recette récupérée avec succès"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Recette non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["recettes"],
+				"summary": "Supprimer une recette",
+				"description": "Permet de supprimer une recette existante",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la recette"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Recette supprimée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Recette non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["recettes"],
+				"summary": "Modifier une recette",
+				"description": "Permet de modifier partiellement une recette existante",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la recette"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Recette modifiée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Recette non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/reservations": {
+			"get": {
+				"tags": ["reservations"],
+				"summary": "Récupérer la liste des réservations",
+				"description": "Permet de récupérer la liste complète des réservations",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK - Liste des réservations récupérée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"post": {
+				"tags": ["reservations"],
+				"summary": "Créer une nouvelle réservation",
+				"description": "Permet d'ajouter une nouvelle réservation",
+				"parameters": [],
+				"responses": {
+					"201": {
+						"description": "Created - Réservation créée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/reservations/{id}": {
+			"get": {
+				"tags": ["reservations"],
+				"summary": "Récupérer une réservation spécifique",
+				"description": "Permet de récupérer les détails d'une réservation par son ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la réservation"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Réservation récupérée avec succès"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Réservation non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["reservations"],
+				"summary": "Supprimer une réservation",
+				"description": "Permet de supprimer une réservation existante",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la réservation"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Réservation supprimée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Réservation non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["reservations"],
+				"summary": "Modifier une réservation",
+				"description": "Permet de modifier partiellement une réservation existante",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la réservation"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Réservation modifiée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Réservation non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/reservations/date/{date}": {
+			"get": {
+				"tags": ["reservations"],
+				"summary": "Récupérer les réservations pour une date spécifique",
+				"description": "Permet de récupérer toutes les réservations pour une date donnée",
+				"parameters": [
+					{
+						"name": "date",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Date au format YYYY-MM-DD"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Liste des réservations récupérée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Format de date invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Aucune réservation trouvée pour cette date"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/roles": {
+			"get": {
+				"tags": ["roles"],
+				"summary": "Récupérer la liste des rôles",
+				"description": "Permet de récupérer la liste complète des rôles",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK - Liste des rôles récupérée avec succès"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"post": {
+				"tags": ["roles"],
+				"summary": "Créer un nouveau rôle",
+				"description": "Permet d'ajouter un nouveau rôle",
+				"parameters": [
+					{
+						"name": "body",
+						"in": "body",
+						"required": true,
+						"description": "Données du rôle à créer",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string",
+									"example": "admin",
+									"description": "Nom du rôle"
+								}
+							},
+							"required": ["name"]
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "Created - Rôle créé avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/roles/{id}": {
+			"get": {
+				"tags": ["roles"],
+				"summary": "Récupérer un rôle spécifique",
+				"description": "Permet de récupérer les détails d'un rôle par son ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique du rôle"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Rôle récupéré avec succès"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Rôle non trouvé"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"put": {
+				"tags": ["roles"],
+				"summary": "Modifier un rôle",
+				"description": "Permet de modifier complètement un rôle existant",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique du rôle"
+					},
+
+					{
+						"name": "body",
+						"in": "body",
+						"required": true,
+						"description": "Nouvelles données du rôle",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string",
+									"example": "moderator",
+									"description": "Nouveau nom du rôle"
+								}
+							},
+							"required": ["name"]
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Rôle modifié avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Rôle non trouvé"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["roles"],
+				"summary": "Supprimer un rôle",
+				"description": "Permet de supprimer un rôle existant",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique du rôle"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Rôle supprimé avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Rôle non trouvé"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/salles": {
+			"get": {
+				"tags": ["salles"],
+				"summary": "Récupérer la liste des salles",
+				"description": "Permet de récupérer la liste complète des salles disponibles",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK - Liste des salles récupérée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"post": {
+				"tags": ["salles"],
+				"summary": "Créer une nouvelle salle",
+				"description": "Permet d'ajouter une nouvelle salle",
+				"parameters": [],
+				"responses": {
+					"201": {
+						"description": "Created - Salle créée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Ressource non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		},
+		"/salles/{id}": {
+			"get": {
+				"tags": ["salles"],
+				"summary": "Récupérer une salle spécifique",
+				"description": "Permet de récupérer les détails d'une salle par son ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la salle"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Salle récupérée avec succès"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Salle non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"delete": {
+				"tags": ["salles"],
+				"summary": "Supprimer une salle",
+				"description": "Permet de supprimer une salle existante",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la salle"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Salle supprimée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Salle non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			},
+			"patch": {
+				"tags": ["salles"],
+				"summary": "Modifier partiellement une salle",
+				"description": "Permet de modifier partiellement les informations d'une salle existante",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"type": "string",
+						"description": "Identifiant unique de la salle"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK - Salle modifiée avec succès"
+					},
+					"400": {
+						"description": "Bad Request - Requête invalide"
+					},
+					"401": {
+						"description": "Unauthorized - Authentification requise"
+					},
+					"403": {
+						"description": "Forbidden - Accès non autorisé"
+					},
+					"404": {
+						"description": "Not Found - Salle non trouvée"
+					},
+					"500": {
+						"description": "Internal Server Error - Erreur serveur"
+					}
+				}
+			}
+		}
+	}
 }
